@@ -77,6 +77,12 @@ jobs:
           CONFIG_PACKAGE_luci-theme-argon=y
           EOF
           #
+          # 取消不要的app:
+          cat >> .config <<EOF
+          CONFIG_PACKAGE_luci-app-samba=n
+          CONFIG_PACKAGE_luci-app-samba4=n
+          EOF
+          #
           # ===============================================================
           # 
           sed -i 's/^[ \t]*//g' ./.config
