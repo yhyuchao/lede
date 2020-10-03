@@ -74,13 +74,14 @@ jobs:
           # EOF
           # LuCI主题:
           cat >> .config <<EOF
+          # CONFIG_PACKAGE_luci-theme-bootstrap is not set
           CONFIG_PACKAGE_luci-theme-argon=y
           EOF
           #
           # 取消不要的app:
           cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-app-samba=n
-          CONFIG_PACKAGE_luci-app-samba4=n
+          # CONFIG_PACKAGE_luci-app-samba is not set
+          # CONFIG_PACKAGE_luci-app-samba4 is not set
           EOF
           #
           # ===============================================================
